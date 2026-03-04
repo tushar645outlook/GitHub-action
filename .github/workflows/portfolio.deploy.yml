@@ -22,8 +22,8 @@ jobs:
       - name: Setup github pages
         uses: actions/configure-pages@v4
 
-      - name: upload static files
-        uses: actions/upload-static@v4
+      - name: Upload static files
+        uses: actions/upload-pages-artifact@v3
         with:
           path: ./
         
