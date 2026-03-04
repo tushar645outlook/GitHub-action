@@ -24,6 +24,8 @@ jobs:
 
       - name: upload static files
         uses: actions/upload-static@v4
+        with:
+          path: "."
         
 
       - name: deploy to github pages
