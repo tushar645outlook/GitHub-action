@@ -2,6 +2,7 @@ name: portfolio
 on:
   push: 
     branches: [main]
+  workflow_dispatch: 
 
 permissions: 
   pages: write
@@ -10,6 +11,9 @@ permissions:
 jobs:
   deploy: 
     runs-on: ubuntu-latest
+    environment:
+      - name: github pages
+        url: ${{ steps.deployment.output.page_url }}
     steps:
       - name: checkout code
         run: actions/checkout@v4
